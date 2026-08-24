@@ -62,7 +62,6 @@ Gym_Project_BackEnd/
 ├── .env                             # Local environment variables (git-ignored)
 ├── .env.example                     # Environment variables template
 ├── .gitignore                       # Git ignore rules
-├── Gym_Management_System_Backend_Documentation.pdf # Full PDF Specification
 ├── package.json                     # Node.js dependencies & scripts
 ├── README.md                        # Project documentation & guide
 └── server.js                        # Root entry point to start server
@@ -141,21 +140,6 @@ Gym_Project_BackEnd/
 - [MongoDB](https://www.mongodb.com/) (Local instance or MongoDB Atlas cluster)
 - [Git](https://git-scm.com/)
 
-### 2. Environment Variables Setup
-Create a `.env` file in the project root directory (you can copy `.env.example`):
-
-```bash
-cp .env.example .env
-```
-
-Define your environment variables:
-```env
-PORT=5000
-NODE_ENV=development
-MONGO_URI=mongodb://localhost:27017/gym_db
-JWT_SECRET=your_jwt_secret_key_here
-JWT_EXPIRES_IN=7d
-```
 
 ### 3. Install Dependencies
 ```bash
