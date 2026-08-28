@@ -7,6 +7,8 @@ const authRoutes = require('./routes/authRoutes');
 const subscriptionRoutes = require('./routes/subscriptionRoutes');
 const memberRoutes = require("./routes/memberRoutes");
 const trainerRoutes = require("./routes/trainerRoutes");
+const attendanceRoutes= require("./routes/attendanceRoutes")
+const dashboardRoutes=require("./routes/dashboardRoutes")
 
 const app = express();
 
@@ -22,6 +24,10 @@ app.use('/api/plans', planRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
 app.use("/api/members", memberRoutes);
 app.use("/api/trainer",trainerRoutes)
+app.use("/api/attendance",attendanceRoutes)
+
+app.use("/api/dashboard",dashboardRoutes)
+
 
 
 // Test Route
