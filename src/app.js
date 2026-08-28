@@ -5,7 +5,8 @@ const errorMiddleware = require("./middleware/errorMiddleware");
 const planRoutes = require('./routes/planRoutes');
 const authRoutes = require('./routes/authRoutes');
 const subscriptionRoutes = require('./routes/subscriptionRoutes');
-
+const memberRoutes = require("./routes/memberRoutes");
+const trainerRoutes = require("./routes/trainerRoutes");
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);   
 app.use('/api/plans', planRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
+app.use("/api/members", memberRoutes);
+app.use("/api/trainer",trainerRoutes)
 
 
 // Test Route
