@@ -4,6 +4,7 @@ const express = require('express');
 const errorMiddleware = require("./middleware/errorMiddleware");
 const planRoutes = require('./routes/planRoutes');
 const authRoutes = require('./routes/authRoutes');
+const subscriptionRoutes = require('./routes/subscriptionRoutes');
 
 
 const app = express();
@@ -17,6 +18,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);   
 app.use('/api/plans', planRoutes);
+app.use('/api/subscriptions', subscriptionRoutes);
 
 
 // Test Route
