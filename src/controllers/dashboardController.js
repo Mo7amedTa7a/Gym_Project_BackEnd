@@ -12,9 +12,9 @@ const getDashboardStats = async (req, res) => {
 
         const total_Members = await Member.countDocuments();
 
-        const active_Subscriptions = await Subscription.countDocuments({status: "Active"});
+        const active_Subscriptions = await Subscription.countDocuments({ status: "Active" });
 
-        const expired_Subscriptions = await Subscription.countDocuments({status: "expired"});
+        const expired_Subscriptions = await Subscription.countDocuments({ status: "expired" });
 
         const total_Trainers = await Trainer.countDocuments();
 
@@ -36,15 +36,23 @@ const getDashboardStats = async (req, res) => {
         });
 
 
-        const active_Members = await Subscription.countDocuments({status: "Active"});
+        const activeMemberIds = await Subscription.distinct("member", {
+            status: "Active"
+        });
 
-        const expired_Members = await Subscription.countDocuments({ status: "expired" });
+        const activeMembersCount = activeMemberIds.length;
+
+        const expiredMemberIds = await Subscription.distinct("member", {
+            status: "Expired"
+        });
+
+        const expiredMembersCount = expiredMemberIds.length;
 
 
         return res.status(200).json({
             total_Members,
-            active_Members,
-            expired_Members,
+            activeMembersCount,
+            expiredMembersCount,
             active_Subscriptions,
             expired_Subscriptions,
             total_Trainers,
