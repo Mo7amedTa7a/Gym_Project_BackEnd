@@ -172,7 +172,7 @@ npm start
 
 ---
 
-## 🚀 GitHub Push Instructions
+##  GitHub Push Instructions
 
 To push this repository to GitHub:
 
