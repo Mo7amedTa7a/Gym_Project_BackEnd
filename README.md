@@ -133,6 +133,18 @@ Gym_Project_BackEnd/
 
 ---
 
+## 📖 API Documentation (Swagger)
+
+Interactive Swagger UI documentation is integrated and available when the server is running:
+
+- **Swagger UI:** [http://localhost:3000/api-docs](http://localhost:3000/api-docs) (or simply [http://localhost:3000](http://localhost:3000))
+- **OpenAPI JSON Spec:** [http://localhost:3000/api-docs.json](http://localhost:3000/api-docs.json)
+
+> **Authorization in Swagger:**
+> Click the **Authorize** button in Swagger UI and enter your JWT token (`Bearer <your_token>`) to test protected endpoints directly.
+
+---
+
 ## ⚙️ Setup & Installation Guide
 
 ### 1. Prerequisites
